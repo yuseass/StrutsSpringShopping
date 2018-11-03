@@ -31,3 +31,10 @@
 SELECT * FROM table limit M,N 
 M: 开始序号
 N: 每次取数据条目数
+
+
+总结：1.	本次实验要在struts2基础上加上spring4，使用spring4的数据库操作很方便，尤其是采用了注解的方式，甚至不用在配置xml.
+2.	使用<result name="success" type="redirect">getAllGoods</result>可以跳转到action不带参数
+<result name="getAllGoods" type="chain">getAllGoods</result>跳转带参数
+3.	dao层对数据操作，服务层调用底层dao,对功能进行封装，控制层调用服务层来实现功能。
+4.	配置AOP可以实现spring事务管理。配置事务管理bean，在AOP中应用
